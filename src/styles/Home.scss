@@ -1,0 +1,44 @@
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+    // padding: 1rem 3rem;
+    align-items: left;
+    overflow-y: hidden;
+    // padding: 3rem 0;
+    width: 100%;
+    padding: 1.5rem;
+    height: 100%;
+
+    @media(min-width: 700px) {
+        padding: 3rem;
+    }
+
+
+
+    
+    h1 {
+        font-size: 52px;
+        color: whitesmoke;
+        margin: .5rem;
+        opacity: 0;
+        
+
+        
+        span {
+            color: #66fcf1;
+            font-style: italic;
+        }
+
+
+
+         @media(min-width: 700px) {
+            font-size: 100px;
+            margin: .5rem;
+        }
+    }
+
+}
