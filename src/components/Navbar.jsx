@@ -1,9 +1,13 @@
 import { gsap, Power4, Power2, Power1 } from "gsap";
 import { Link, useLocation } from "react-router-dom";
 import { VscHome } from "react-icons/vsc";
+import { TfiHome } from "react-icons/tfi";
 import { IoPerson } from "react-icons/io5";
-import { BsBriefcase } from "react-icons/bs";
+import { CiUser } from "react-icons/ci";
+import { IoBriefcaseOutline } from "react-icons/io5";
 import { BiEnvelope } from "react-icons/bi";
+import { RiMailSendLine } from "react-icons/ri";
+import { CiMail } from "react-icons/ci";
 import "../styles/Navbar.scss";
 import { useRef, useState, useEffect } from "react";
 
@@ -13,11 +17,33 @@ const Navbar = () => {
 
   const [renderPage, setRenderPage] = useState(null);
 
+  const [navActive, SetNavActive ] = useState();
+
+
+  
+  
+  
+  const getCurrentPage = () => {  
+    if(pathname === "/") {
+      return "home"
+    }
+    
+    else if(pathname === "/about") {
+      return "about"
+    }
+
+    else if(pathname === "/projects") {
+      return "projects"
+    }
+
+    
+    else if (pathname === "/contact") {
+      return "contact"
+    }
+  }
   
 
-  // const ref1 = useRef(null)
-
-  // console.log(pathname);
+  
 
   
   
@@ -73,31 +99,43 @@ const Navbar = () => {
   return (
     <nav>
       <ul>
-        <li>
+        <li className={getCurrentPage() === "home" ? "active" : ""}>
           <Link to='/'>
-            <VscHome fill='white' size={"1.5em"} onClick={handleClick} data-location="/" />
+            <VscHome
+              size={"1.5em"}
+              onClick={handleClick}
+              data-location='/'
+            />
           </Link>
           {/* <VscHome >
             <Link to='/' onClick={handleClick}></Link>
           </VscHome> */}
         </li>
-        <li onClick={handleClick}>
+        <li
+          className={getCurrentPage() === "about" ? "active" : ""}
+          onClick={handleClick}
+        >
           <Link to='/about'>
-            <IoPerson fill='#66fcf1' size={"1.5em"} data-location='/about' />
+            <CiUser size={"1.56em"} data-location='/about' />
           </Link>
         </li>
-        <li onClick={handleClick}>
+        <li
+          className={getCurrentPage() === "projects" ? "active" : ""}
+          onClick={handleClick}
+        >
           <Link to='/projects'>
-            <BsBriefcase
-              size={"1.5em"}
-              fill='white'
+            <IoBriefcaseOutline
+              size={"1.4em"}
               data-location='/projects'
             />
           </Link>
         </li>
-        <li onClick={handleClick}>
+        <li
+          className={getCurrentPage() === "contact" ? "active" : ""}
+          onClick={handleClick}
+        >
           <Link to='/contact'>
-            <BiEnvelope size={"1.5em"} fill='white' data-location='/contact' />
+            <CiMail size={"1.5em"} data-location='/contact' />
           </Link>
         </li>
       </ul>

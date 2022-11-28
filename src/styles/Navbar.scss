@@ -30,14 +30,16 @@ ul {
         align-items: center;
     }
 
-}
+    svg {
+        fill: white;
+        stroke: white;
+        transition: transform 0.5s ease;
+    }
+    
+    li.active svg {
+        fill: #66fcf1;
+        stroke: #66fcf1;
+        transform: scale(1.2);
+    }
 
-
-svg {
-    transition: transform 0.5s ease;
-}
-
-svg:hover {
-    transform: scale(1.1);
-    fill: "#c5c6c7";
 }

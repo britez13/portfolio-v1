@@ -1,11 +1,9 @@
 import { useEffect } from "react";
 import TagCloud from "TagCloud";
 
-
-import "../styles/TextSphere.scss"
+import "../styles/TextSphere.scss";
 
 const TextSphere = () => {
-
   useEffect(() => {
     return () => {
       const container = ".tagcloud";
@@ -34,8 +32,6 @@ const TextSphere = () => {
     };
   }, []);
 
-
-    
   return (
     <>
       <div className='text-shpere'>
@@ -44,6 +40,6 @@ const TextSphere = () => {
       </div>
     </>
   );
-}
+};
 
-export default TextSphere
+export default TextSphere;
