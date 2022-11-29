@@ -1,0 +1,14 @@
+
+
+.projects {
+    padding-inline: 1.5rem;
+    overflow-y: scroll;
+}
+
+.projects-container {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    row-gap: 50px;
+}

@@ -1,0 +1,70 @@
+.project-card {
+    display: flex;
+    max-width: 900px;
+    border-radius: 8px;
+    border: 1px solid grey;
+    overflow: hidden;
+
+
+
+
+
+
+    
+    picture {
+        width: min(100%, 700px) ;
+        height: 100%;
+        // object-fit: cover;
+        overflow: hidden;
+        
+    }
+
+
+    
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+
+        
+        
+        &:hover {
+            transform: scale(1.03);
+        }
+
+    }
+
+
+    
+    .info {
+        max-width: 300px;
+        padding-inline: 15px;
+        padding-block: 20px;
+        // background-color: grey;
+
+        
+        p {
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+        
+        a {
+            color: currentColor;
+            text-decoration: none;
+
+            
+            &:first-of-type {
+                margin-right: 1rem;
+            }
+
+
+
+        }
+
+    }
+}
