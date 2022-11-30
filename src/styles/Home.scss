@@ -1,38 +1,50 @@
+@import "./App.scss";
+
 
 .home {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     flex-grow: 1;
-    // justify-content: center;
+    justify-content: space-between;
     // padding: 1rem 3rem;
-    // align-items: left;
+    align-items: center;
     word-wrap: break-word;
     word-break: break-all;
     overflow-y: scroll;
     // padding: 3rem 0;
+    gap: 1rem;
     width: 100%;
     padding: 1.5rem;
     min-height: 100vh;
 
-    @media(min-width: 700px) {
-        padding-inline: 3rem;
+    @media(min-width: $tablet) {
+        flex-direction: row;
+        padding-inline: 2.5rem;
     }
 
 
 
-    
-    h1 {
+
+    .title {
         font-size: 52px;
-        color: whitesmoke;
-        margin: .5rem;
+        color: white;
+        // margin: .5rem;
+        overflow: hidden;
+
         // opacity: 0;
-        
 
         
-        span {
-            color: #66fcf1;
+        .letter {
+            display: inline-block;
+            transform: translate(-100%, -100%);
+        }
+
+
+        .name {
+            display: inline-block;
+            color: $aqua;
             font-style: italic;
+            transform: translate(-100%, -100%);
         }
 
 
@@ -42,5 +54,15 @@
             margin: .5rem;
         }
     }
+
+
+
+    .home-image  {
+        max-width: 400px;
+        opacity: 0;
+    }
+
+
+
 
 }

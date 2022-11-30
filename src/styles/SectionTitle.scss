@@ -1,0 +1,21 @@
+@import "./App.scss";
+
+.section-title {
+    font-size: 3.5rem;
+    letter-spacing: 3px;
+    overflow-y: hidden;
+    font-family: 'Bebas Neue', cursive;
+    margin: 0;
+    
+    .word {
+        display: inline-block;
+        transform: translateY(100%);
+    }
+
+    .point {
+        display: inline-block;
+        color: $aqua;
+    }
+
+
+}

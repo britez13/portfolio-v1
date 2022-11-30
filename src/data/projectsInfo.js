@@ -13,7 +13,7 @@ export const projectsInfo = [
     codeURL: "https://github.com/britez13/entertainment-web-app",
   },
   {
-    name: "Photosnap multipage site",
+    name: "Photosnap",
     description:
       "The frontend part of a marketing site for a photo-sharing app, it has an advanced layout which make it perfect to dig and put into practice my CSS skills",
     stack: "JavaScript, Next.js, styled-components",

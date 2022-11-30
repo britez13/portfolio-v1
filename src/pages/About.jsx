@@ -1,17 +1,18 @@
 import { useEffect } from "react";
 import gsap from "gsap";
+import SectionTitle from "../components/SectionTitle";
 import TextSphere from "../components/TextSphere";
 import "../styles/About.scss";
 
 const About = () => {
 
   useEffect(() => {
-    gsap.to(".about", { opacity: 1, duration: 2, delay: 2.5 });  
+    gsap.to(".about", { opacity: 1, duration: 2, delay: 2.7 });  
   }, []);
 
   return (
     <main className='about'>
-      <h1 className='title'>About Me</h1>
+      <SectionTitle>About Me</SectionTitle>
       <section>
         <div className='description'>
           <img src='' alt='My nice photo' />

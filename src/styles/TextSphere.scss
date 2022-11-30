@@ -1,3 +1,7 @@
+
+@import "./App.scss";
+
+
 .text-shpere {
     // position: relative;
     // top: 0;
@@ -26,7 +30,7 @@
 
 /* Change color of each text in sphere on hover   */
 .tagcloud--item {
-    color: #00ffffff;
+    color: $aqua;
     text-transform: uppercase;
     transition: color 0.3s ease;
 }
