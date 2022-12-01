@@ -2,17 +2,11 @@
     display: flex;
     max-width: 900px;
     border-radius: 8px;
-    border: 1px solid grey;
+    border: 1px solid #1f2833;
     overflow: hidden;
     opacity: 0;
-    transform: scale(0);
+    transform: translateY(3rem);
 
-
-
-
-
-
-    
     picture {
         width: min(100%, 700px) ;
         height: 100%;
@@ -21,8 +15,6 @@
         
     }
 
-
-    
     img {
         width: 100%;
         height: 100%;
@@ -30,12 +22,10 @@
         border-top-left-radius: 8px;
         border-bottom-left-radius: 8px;
         overflow: hidden;
-        transition: transform 0.3s ease;
+        transition: transform 0.5s ease-in-out;
 
-        
-        
         &:hover {
-            transform: scale(1.03);
+            transform: scale(1.05);
         }
 
     }
@@ -46,18 +36,38 @@
         max-width: 300px;
         padding-inline: 15px;
         padding-block: 20px;
-        // background-color: grey;
+
+        
+        h2 {
+            font-weight: 400;
+            // color: #66fcf1;
+        }
+
 
         
         p {
             font-size: 12px;
             line-height: 1.5;
+            color: rgb(155, 154, 154);
         }
+
+        
+        p.stack {
+            font-weight: 700;
+
+            span {
+                font-weight: 400;
+            }
+        }
+
+
 
         
         a {
             color: currentColor;
-            text-decoration: none;
+            text-decoration: underline;
+            text-decoration-color: #66fcf1;
+            font-size: 14px;
 
             
             &:first-of-type {

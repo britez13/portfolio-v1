@@ -1,72 +1,108 @@
+
+@import "./App.scss";
+
 .contact {
 
-    padding: 3rem 3rem 0;
+    padding: 3rem 3rem 0 3rem;
     flex-grow: 1;
+    overflow-y: scroll;
     // width: 100%;
 
     
     .container {
-        display: flex;
-        justify-content: center;
-        gap: 5rem;
-    }
-
-
-    
-    form  {
-        display: flex;
-        flex-direction: column;
-        min-width: 500px;
-        max-width: 700px;
-        gap: 1.5rem;
-        
-        input {
-            padding: .7rem;
-            background-color: #1f2833;
-            border: 1px solid grey;
-            outline: none;
-            border-radius: 5px;
-            color: white;
-        }
-
-        
-        .text-area {
-            background-color: #1f2833;
-            border: 1px solid grey;
-            outline: none;
-            border-radius: 5px;
-            color: white;
-        }
-
-
-
-
-        button {
-            padding: .5rem .4rem;
-            max-width: 120px;
-        }
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4rem;
+        justify-content: space-between;
+        height: 80%;
     }
 
     
     .social-media {
         display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: space-around;
+        margin-top: 2rem;
 
         
         svg {
-            fill: grey;
 
-            
+            transition: fill 0.3s ease;
             
             &:hover {
-                fill: aqua;
+                fill: $aqua;
             }
+
 
 
         }
 
+
+
     }
+
+    
+    form  {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        // min-width: 500px;
+        // max-width: 700px;
+        width: 100%;
+        gap: 1.5rem;
+        
+        input {
+            padding: .7rem;
+            background-color: #1f2833;
+            outline: none;
+            border: 1px solid $aqua;
+            // border-radius: 5px;
+            color: white;
+            font-family: inherit;
+        }
+
+        
+        .text-area {
+            background-color: #1f2833;
+            outline: none;
+            // border-radius: 5px;
+            border: 1px solid $aqua;
+            color: white;
+            resize: none;
+            padding: .7rem;
+            font-family: inherit;
+        }
+
+        button {
+            padding: .5rem .4rem;
+            max-width: 120px;
+            border: 1px solid $aqua;
+            background-color: transparent;
+            color: $aqua;
+            cursor: pointer;
+            font-family: inherit;
+        }
+    }
+
+    
+    // .social-media {
+    //     display: flex;
+    //     flex-direction: column;
+    //     justify-content: space-evenly;
+
+        
+    //     svg {
+    //         fill: grey;
+
+            
+            
+    //         &:hover {
+    //             fill: aqua;
+    //         }
+
+
+    //     }
+
+    // }
 
 
 

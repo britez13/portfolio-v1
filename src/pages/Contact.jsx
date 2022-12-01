@@ -1,10 +1,7 @@
-
 import SectionTitle from "../components/SectionTitle";
-import { BsLinkedin } from "react-icons/bs"
-import { BsGithub } from "react-icons/bs"
-import { SiDiscord } from "react-icons/si"
-import { RiSendPlaneFill } from "react-icons/ri";
-
+import Map from "../components/Map";
+import { BsLinkedin } from "react-icons/bs";
+import { BsGithub } from "react-icons/bs";
 
 import "../styles/Contact.scss";
 
@@ -17,28 +14,32 @@ const Contact = () => {
     <main className='contact'>
       <SectionTitle>Contact</SectionTitle>
       <div className='container'>
-        <form>
-          <input type='email' placeholder='your@email.com' />
-          <textarea
-            className="text-area"
-            name=''
-            id=''
-            cols='30'
-            rows='15'
-            placeholder='Message goes here :)'
-          ></textarea>
-          <button type='submit' onSubmit={handleSubmit}>
-            Send{" "}
-            <span>
-              <RiSendPlaneFill />
-            </span>
-          </button>
-        </form>
+        <div>
+          <div className='social-media'>
+            <BsLinkedin size='1.5rem' />
+            <BsGithub size='1.5rem' />
+            {/* <SiDiscord size='1.6rem' /> */}
+          </div>
 
-        <div className='social-media'>
-          <BsLinkedin size='2rem' />
-          <BsGithub size='2rem' />
-          <SiDiscord size='2.1rem' />
+          <form>
+            <input type='text' placeholder='Name' />
+            <input type='email' placeholder='my@email.com' />
+            <textarea
+              className='text-area'
+              name=''
+              id=''
+              cols='30'
+              rows='10'
+              placeholder='Message goes here'
+            ></textarea>
+            <button type='submit' onSubmit={handleSubmit}>
+              Send
+            </button>
+          </form>
+        </div>
+
+        <div>
+          <Map />
         </div>
       </div>
     </main>

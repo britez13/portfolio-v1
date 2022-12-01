@@ -34,13 +34,13 @@
         // opacity: 0;
 
         
-        .letter {
+        .letter-group1, .letter-group2, .letter-group4 {
             display: inline-block;
             transform: translate(-100%, -100%);
         }
 
 
-        .name {
+        .letter-group3-name {
             display: inline-block;
             color: $aqua;
             font-style: italic;
@@ -56,6 +56,8 @@
     }
 
 
+    
+    
 
     .home-image  {
         max-width: 400px;

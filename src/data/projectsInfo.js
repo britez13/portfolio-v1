@@ -2,7 +2,7 @@ export const projectsInfo = [
   {
     name: "Entertainment site",
     description:
-      "A multipage entertainment web app. Implement Firebase services such as Authorization and Firestore to register users and save their data. Also have routing, stage managament and search functionality",
+      "It implements Firebase services such as Authorization and Firestore to register users and save their data. Also have routing, stage managament and search functionality",
     stack: "JavaScript, React, Tailwind, Firebase",
     img: {
       avif: "/assets/entertainment-site.avif",
@@ -66,7 +66,7 @@ export const projectsInfo = [
   },
   {
     name: "Advice Generator",
-    description: "A random quote advice generator app.",
+    description: "A random quote advice generator app. bla bla bla bla bla bla bla bla bla bla abkfjdlfjlas fdjfl kfjdfhkfhds",
     stack: "TypeScript, React, Tailwind",
     img: {
       avif: "/assets/advice-generator.avif",

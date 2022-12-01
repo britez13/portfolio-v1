@@ -5,7 +5,7 @@ import "../styles/ProjectCard.scss";
 const ProjectCard = ({ project }) => {
   useEffect(() => {
     
-    gsap.to(".project-card", {scale: 1, opacity: 1, duration: 2, stagger: 1.2, delay: 4.5})
+    gsap.to(".project-card", { opacity: 1, y: 0, duration: 1.5, stagger: 1.2, delay: 2.8})
     
   }, []);
 
@@ -27,9 +27,9 @@ const ProjectCard = ({ project }) => {
         />
       </picture>
       <div className='info'>
-        <h1>{project.name}</h1>
+        <h2>{project.name}</h2>
         <p>{project.description}</p>
-        <p>
+        <p className="stack">
           Stack: <span>{project.stack}</span>{" "}
         </p>
         <a href={project.liveURL} target='_blank'>

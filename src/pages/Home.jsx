@@ -4,52 +4,104 @@ import "../styles/Home.scss";
 
 const Home = () => {
 
-  const HomeTitle = ({children}) => {
+  
+
+  
+  
+
+  const FirstTitle = ({ children }) => {
     const word = Array.from(children);
 
-    const letters = word.map((letter, index) => <span key={index} className="letter">{letter === " " ? "\u00A0" : letter}</span>);
+    const letters = word.map((letter, index) => (
+      <span key={index} className='letter-group1'>
+        {letter === " " ? "\u00A0" : letter}
+      </span>
+    ));
 
-    return letters
-
+    return letters;
   };
 
-  
-  const Name = ({ children }) => {
-     const word = Array.from(children);
+  const SecondTitle = ({ children }) => {
+    const word = Array.from(children);
 
-     const letters = word.map((letter, index) => (
-       <span key={index} className='name'>
-         {letter === " " ? "\u00A0" : letter}
-       </span>
-     ));
+    const letters = word.map((letter, index) => (
+      <span key={index} className='letter-group2'>
+        {letter === " " ? "\u00A0" : letter}
+      </span>
+    ));
 
-     return letters;
+    return letters;
   };
 
+  const ThirdTitle = ({ children }) => {
+    const word = Array.from(children);
 
-  
-  
+    const letters = word.map((letter, index) => (
+      <span key={index} className='letter-group3-name'>
+        {letter === " " ? "\u00A0" : letter}
+      </span>
+    ));
+
+    return letters;
+  };
+
+  const FourthTitle = ({ children }) => {
+    const word = Array.from(children);
+
+    const letters = word.map((letter, index) => (
+      <span key={index} className='letter-group4'>
+        {letter === " " ? "\u00A0" : letter}
+      </span>
+    ));
+
+    return letters;
+  };
+
+  // const Name = ({ children }) => {
+  //   const word = Array.from(children);
+
+  //   const letters = word.map((letter, index) => (
+  //     <span key={index} className='name'>
+  //       {letter === " " ? "\u00A0" : letter}
+  //     </span>
+  //   ));
+
+  //   return letters;
+  // };
+
   useEffect(() => {
-    gsap.to(".letter", {x: 0, y: 0, duration: .6, delay: 2, stagger: 0.3})
-    gsap.to(".name", { x: 0, y: 0, duration: .6, delay: 3, stagger: 0.3 });
-    gsap.to(".home-image", { opacity: 1, duration: 10, delay: 3});
+    gsap.to(".letter-group1", { x: 0, y: 0, duration: 0.5, delay: 2, stagger: 0.2 });
+    gsap.to(".letter-group2", { x: 0, y: 0, duration: 0.5, delay: 2.8, stagger: 0.2 });
+    gsap.to(".letter-group3-name", { x: 0, y: 0, duration: 0.5, delay: 3.6, stagger: 0.2 });
+    gsap.to(".letter-group4", { x: 0, y: 0, duration: 0.5, delay: 5.8, stagger: 0.2 });
+    // gsap.to(".name", { x: 0, y: 0, duration: 0.6, delay: 3, stagger: 0.3 });
+    gsap.to(".home-image", { opacity: 1, duration: 5, delay: 2.4 })
+    // gsap.to(".home-image", { opacity: 1, duration: 10, delay: 3 });
+
+    // const tl = gsap.timeline({
+    //   defaults: { duration: 0.8, y: 0, x: 0 }
+    // })
+
+    // const tl = gsap.timeline()
+    // .to(".letter-group1")
+    // tl.to(".letter-group2")
+    
+
+
   });
 
   return (
     <main className='home'>
       <section>
         <h1 className='title'>
-          <HomeTitle>Hi</HomeTitle>
+          <FirstTitle>Hi!</FirstTitle>
         </h1>
         <h1 className='title'>
-          <HomeTitle>I'm</HomeTitle>
-          <span>
-            {" "}
-            <Name> Florencio</Name>
-          </span>
+          <SecondTitle>I'm</SecondTitle>
+          <ThirdTitle> Florencio</ThirdTitle>
         </h1>
         <h1 className='title'>
-          <HomeTitle>Frontend dev.</HomeTitle>
+          <FourthTitle>Frontend dev.</FourthTitle>
         </h1>
       </section>
       <section>
