@@ -1,5 +1,9 @@
+
+@import "./App.scss";
+
 .project-card {
     display: flex;
+    flex-direction: column;
     max-width: 900px;
     border-radius: 8px;
     border: 1px solid #1f2833;
@@ -79,4 +83,12 @@
         }
 
     }
+
+    
+    @media(min-width: $tablet) {
+        flex-direction: row;
+    } 
+
+
+
 }

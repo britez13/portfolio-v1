@@ -5,15 +5,14 @@ import TextSphere from "../components/TextSphere";
 import "../styles/About.scss";
 
 const About = () => {
-
   useEffect(() => {
-    gsap.to(".about", { opacity: 1, duration: 2, delay: 2.7 });  
+    gsap.to(".about", { opacity: 1, duration: 2, delay: 2.7 });
   }, []);
 
   return (
     <main className='about'>
       <SectionTitle>About Me</SectionTitle>
-      <section>
+      <section className="container">
         <div className='description'>
           <img src='' alt='My nice photo' />
           <p>
@@ -25,8 +24,8 @@ const About = () => {
             technologies. Actually, my next goal is learning backend.
           </p>
           <p>
-            Besides programming, I like solving chess puzzles, playing football and
-            reading psyco-thriller books.{" "}
+            Besides programming, I like solving chess puzzles, playing football
+            and reading psyco-thriller books.{" "}
           </p>
         </div>
 

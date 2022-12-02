@@ -2,15 +2,12 @@
 @import "./App.scss";
 
 
-.text-shpere {
-    // position: relative;
-    // top: 0;
-    width: min(90%, 300px) ;
+.text-shpere { 
+    // width:  ;
     max-height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
-    // background: #1e1e1e;
 }
 
 .tagcloud {
@@ -22,7 +19,7 @@
     letter-spacing: 0.0625em;
     font-size: 1em;
 
-     @media(min-width: 700px) {
+    @media(min-width: $tablet) {
         font-size: 1.1em;     
     }
 
@@ -36,5 +33,5 @@
 }
 
 .tagcloud--item:hover {
-    color: whitesmoke;
+    color: grey;
 }

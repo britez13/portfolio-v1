@@ -1,70 +1,65 @@
 @import "./App.scss";
 
-
 .home {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    justify-content: space-between;
-    // padding: 1rem 3rem;
-    align-items: center;
-    word-wrap: break-word;
-    word-break: break-all;
-    overflow-y: scroll;
-    // padding: 3rem 0;
-    gap: 1rem;
-    width: 100%;
-    padding: 1.5rem;
-    min-height: 100vh;
+  flex-grow: 1;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+  // padding: 1rem 3rem;
+//   align-items: center;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  word-wrap: break-word;
+  word-break: break-all;
+  overflow-y: scroll;
+  // padding: 3rem 0;
+  gap: 1rem;
+  width: 100%;
+  padding: 1.5rem;
+  // min-height: 100vh;
 
-    @media(min-width: $tablet) {
-        flex-direction: row;
-        padding-inline: 2.5rem;
+  .title {
+    // display: none;
+    font-size: 50px;
+    color: white;
+    // margin-bottom: 1rem;
+    overflow-y: hidden;
+    margin: 0;
+
+    // opacity: 0;
+
+    .letter-group1,
+    .letter-group2,
+    .letter-group4 {
+      display: inline-block;
+      transform: translate(0%, 100%);
+      font-weight: 900;
     }
 
+    .letter-group3-name {
+      display: inline-block;
+      color: $aqua;
+    //   font-style: italic;
+      font-weight: 900;
+      transform: translate(0%, 100%);
+    }
+  }
 
+  .home-image {
+    // max-width: 400px;
+    width: 100%;
+    opacity: 0;
+  }
 
+  @media (min-width: $tablet) {
+    // flex-direction: row;
+    grid-template-columns: 2fr 1fr;
+    place-content: center;
+    padding-inline: 2.5rem;
 
     .title {
-        font-size: 52px;
-        color: white;
-        // margin: .5rem;
-        overflow: hidden;
-
-        // opacity: 0;
-
-        
-        .letter-group1, .letter-group2, .letter-group4 {
-            display: inline-block;
-            transform: translate(-100%, -100%);
-        }
-
-
-        .letter-group3-name {
-            display: inline-block;
-            color: $aqua;
-            font-style: italic;
-            transform: translate(-100%, -100%);
-        }
-
-
-
-         @media(min-width: 700px) {
-            font-size: 100px;
-            margin: .5rem;
-        }
+      font-size: 100px;
+      margin: 0.5rem;
     }
-
-
-    
-    
-
-    .home-image  {
-        max-width: 400px;
-        opacity: 0;
-    }
-
-
-
-
+  }
 }

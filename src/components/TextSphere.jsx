@@ -5,6 +5,12 @@ import "../styles/TextSphere.scss";
 
 const TextSphere = () => {
   useEffect(() => {
+
+    const myWidth = window.innerWidth;
+
+    // console.log(myWidth);
+
+
     return () => {
       const container = ".tagcloud";
       const texts = [
@@ -22,7 +28,7 @@ const TextSphere = () => {
       ];
 
       const options = {
-        radius: 220,
+        radius: myWidth < 300 ? 100 : myWidth < 600 ? 140 : 220,
         maxSpeed: "normal",
         initSpeed: "normal",
         keep: true,
