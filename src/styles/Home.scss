@@ -9,8 +9,8 @@
 //   align-items: center;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  word-wrap: break-word;
-  word-break: break-all;
+  // word-wrap: break-word;
+  // word-break: break-all;
   overflow-y: scroll;
   // padding: 3rem 0;
   gap: 1rem;
@@ -51,7 +51,7 @@
     opacity: 0;
   }
 
-  @media (min-width: $tablet) {
+  @media (min-width: $desktop) {
     // flex-direction: row;
     grid-template-columns: 2fr 1fr;
     place-content: center;

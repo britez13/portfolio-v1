@@ -75,7 +75,7 @@ const Home = () => {
     gsap.to(".letter-group3-name", { x: 0, y: 0, duration: 0.4, delay: 3.3, stagger: 0.2 });
     gsap.to(".letter-group4", { x: 0, y: 0, duration: 0.4, delay: 5.4, stagger: 0.2 });
     // gsap.to(".name", { x: 0, y: 0, duration: 0.6, delay: 3, stagger: 0.3 });
-    gsap.to(".home-image", { opacity: 1, duration: 5, delay: 5 })
+    gsap.to(".home-image", { opacity: 1, duration: 8, delay: 7.8 })
     // gsap.to(".home-image", { opacity: 1, duration: 10, delay: 3 });
 
     // const tl = gsap.timeline({

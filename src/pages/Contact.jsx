@@ -4,6 +4,7 @@ import SectionTitle from "../components/SectionTitle";
 import Map from "../components/Map";
 import { BsLinkedin } from "react-icons/bs";
 import { BsGithub } from "react-icons/bs";
+import { CiLocationOn } from "react-icons/ci";
 
 import "../styles/Contact.scss";
 
@@ -43,7 +44,12 @@ const Contact = () => {
 
           <form ref={form} onSubmit={handleSubmit}>
             <input type='text' placeholder='Name' name='user_name' required />
-            <input type='email' placeholder='my@email.com' name='user_email' required />
+            <input
+              type='email'
+              placeholder='my@email.com'
+              name='user_email'
+              required
+            />
             <textarea
               className='text-area'
               name='message'
@@ -57,6 +63,10 @@ const Contact = () => {
         </div>
 
         <div>
+          <span>
+            {/* <CiLocationOn size='1.4rem' fill='#66fcf1' /> */}
+          </span>
+          <span>Villarrica, Paraguay</span>
           <Map />
         </div>
       </div>

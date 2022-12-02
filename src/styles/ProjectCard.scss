@@ -9,7 +9,8 @@
     border: 1px solid #1f2833;
     overflow: hidden;
     opacity: 0;
-    transform: translateY(3rem);
+    transform: translateX(100%);
+    // transform: translateY(3rem);
 
     picture {
         width: min(100%, 700px) ;
@@ -85,8 +86,11 @@
     }
 
     
-    @media(min-width: $tablet) {
+    @media(min-width: $desktop) {
         flex-direction: row;
+        transform: translateX(0);
+        transform: translateY(3rem);
+
     } 
 
 
