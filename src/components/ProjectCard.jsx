@@ -5,6 +5,8 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import "../styles/ProjectCard.scss";
 
 const ProjectCard = ({ project }) => {
+
+  
   useEffect(() => {
 
     const mm = gsap.matchMedia();
@@ -32,12 +34,6 @@ const ProjectCard = ({ project }) => {
     
   }, []);
 
-  
-  
-  
-  
-
-
 
   return (
     <div className='project-card'>
@@ -45,16 +41,17 @@ const ProjectCard = ({ project }) => {
         <source srcSet={project.img.avif} type='image/avif' />
         <source srcSet={project.img.webp} type='image/webp' />
         <img
-          decoding='async'
-          loading='lazy'
           src={project.img.jpg}
-          alt='an avif image'
+          alt='project image'
         />
       </picture>
       <div className='info'>
-        <h2>{project.name}</h2>
+        <h2 className="name">
+          <span>{project.id} </span>
+          {project.name}
+        </h2>
         <p>{project.description}</p>
-        <p className="stack">
+        <p className='stack'>
           Stack: <span>{project.stack}</span>{" "}
         </p>
         <a href={project.liveURL} target='_blank'>

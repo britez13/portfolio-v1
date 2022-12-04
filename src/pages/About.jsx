@@ -14,7 +14,7 @@ const About = () => {
       <SectionTitle>About Me</SectionTitle>
       <section className="container">
         <div className='description'>
-          <img src='' alt='My nice photo' />
+          <img className="my-photo" src='/assets/my-photo2.webp' alt='My nice photo' />
           <p>
             I'm a self-taught Frontend Developer based in Paraguay. Love
             creating nice and solid user interfaces.
@@ -29,8 +29,8 @@ const About = () => {
           </p>
         </div>
 
-        <div>
-          <h2>Skills</h2>
+        <div className="sphere-container">
+          <h2 className="skills">Skills</h2>
           <TextSphere />
         </div>
       </section>

@@ -16,7 +16,7 @@ const Projects = () => {
   }, [])
 
   return (
-    <main className='projects' ref={ref} >
+    <main className='projects' ref={ref}>
       <SectionTitle>Projects</SectionTitle>
       <section className='projects-container'>
         {projectsInfo.map((project) => (

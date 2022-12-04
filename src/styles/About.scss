@@ -27,12 +27,27 @@
         align-items: center;
 
         
-        h2  {
-            text-align: center;
-            // display: none;
+        .my-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 2px solid $aqua;
+            object-fit: cover;
+
         }
 
 
+        
+        .skills {
+            text-align: center;
+            font-family: 'Bebas Neue', cursive;
+            letter-spacing: 2px;
+        }
+
+        .sphere-container {
+            width: 100%;
+        }
+        
     }
 
     

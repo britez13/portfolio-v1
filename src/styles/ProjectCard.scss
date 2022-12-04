@@ -43,9 +43,13 @@
         padding-block: 20px;
 
         
-        h2 {
+        .name {
             font-weight: 400;
-            // color: #66fcf1;
+
+            span {
+                color: $aqua;
+                // font-weight: 700;
+            }
         }
 
 
@@ -71,7 +75,8 @@
         a {
             color: currentColor;
             text-decoration: underline;
-            text-decoration-color: #66fcf1;
+            text-decoration-thickness: 2px;
+            text-decoration-color: $aqua;
             font-size: 14px;
 
             
