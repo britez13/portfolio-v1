@@ -6,6 +6,7 @@
     overflow-y: hidden;
     font-family: 'Bebas Neue', cursive;
     margin: 0;
+    text-align: center;
     
     .word {
         display: inline-block;
@@ -17,5 +18,9 @@
         color: $aqua;
     }
 
+    
+    @media(min-width: $tablet) {
+        text-align: left;
+    }
 
 }

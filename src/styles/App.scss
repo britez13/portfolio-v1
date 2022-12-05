@@ -1,6 +1,7 @@
 
 $aqua: #66fcf1;
 $greyish: #1f2833;
+$black: #0b0c10;
 $white: whitesmoke;
 $tablet: 650px;
 $desktop: 1100px;
@@ -13,7 +14,7 @@ $desktop: 1100px;
 body {
     padding: 0;
     margin: 0;
-    background-color: #0b0c10;
+    background-color: $black;
     color: #c5c6c7;
     min-height: 100vh;
     display: flex;

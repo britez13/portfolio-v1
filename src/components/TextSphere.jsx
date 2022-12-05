@@ -1,6 +1,5 @@
 import { useEffect } from "react";
-import TagCloud  from "TagCloud/dist/TagCloud.min.js";
-
+import TagCloud from "TagCloud/dist/TagCloud.min.js";
 
 // import {idk} from "TagCloud/dist/TagCloud";
 
@@ -28,7 +27,7 @@ const TextSphere = () => {
         "Git",
         "Googling",
         "NPM",
-        "JSON"
+        "JSON",
       ];
 
       // const myTags = [

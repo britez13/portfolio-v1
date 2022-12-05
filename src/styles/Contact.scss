@@ -3,9 +3,10 @@
 
 .contact {
 
-    padding: 3rem 3rem 0 3rem;
+    padding: 1.5rem 2rem 0 1.5rem;
     flex-grow: 1;
     overflow-y: scroll;
+    opacity: 0;
     // width: 100%;
 
     
@@ -80,6 +81,13 @@
             color: $aqua;
             cursor: pointer;
             font-family: inherit;
+            transition: background-color 0.3s ease, color 0.3s ease;
+
+            &:hover {
+                background-color: $aqua;
+                color: $black;
+            }
+
         }
     }
 

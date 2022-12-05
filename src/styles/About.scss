@@ -11,52 +11,94 @@
     padding: 2rem;
     overflow-y: scroll;
 
-    
-
-    
-    .description {
-        max-width: 350px;
-    }
-
-
-  
     .container {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
 
-        
+        .description {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+
         .my-photo {
             width: 200px;
             height: 200px;
             border-radius: 50%;
-            border: 2px solid $aqua;
+            // border: 2px solid $aqua;
             object-fit: cover;
+            box-shadow: 0px 0px 5px 1px $aqua;
 
         }
 
-
-        
         .skills {
-            text-align: center;
-            font-family: 'Bebas Neue', cursive;
-            letter-spacing: 2px;
+            width: 100%;
+
+
+            .list {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                justify-content: space-between;
+                row-gap: 15px;
+
+
+                li {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+
+                h3 {
+                    margin-top: 5px;
+                    font-size: 14px;
+                    // text-align: center;
+                }
+            }
+
+            svg {
+                fill: $aqua;
+            }
+
         }
 
-        .sphere-container {
-            width: 100%;
+
+
+        .skills-title {
+            text-align: center;
+            font-size: 2rem;
+            font-family: 'Bebas Neue', cursive;
+            letter-spacing: 2.8px;
+
+            span {
+                color: $aqua;
+            }
         }
+
         
+
     }
 
-    
+
     @media(min-width: $desktop) {
         flex-direction: row;
 
-        
+
         .container {
             flex-direction: row;
+
+            
+            .skills-title {
+                text-align: center;
+            }
+
+
+
+
         }
 
 
