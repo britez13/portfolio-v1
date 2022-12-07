@@ -1,11 +1,11 @@
 import { useEffect, useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+// import AOS from "aos";
+// import "aos/dist/aos.css";
 
 import "../styles/ProjectCard.scss";
 
 const ProjectCard = ({ project, elementsArray }) => {
-  gsap.registerPlugin(ScrollTrigger);
 
   const projectRef = useRef()
 
@@ -30,9 +30,9 @@ const ProjectCard = ({ project, elementsArray }) => {
     // console.log("project card use layout effect");
     // console.log(projectRef)
 
-    if (projectRef && !elementsArray.includes(projectRef)) {
-      elementsArray.push(projectRef);
-    }
+    // if (projectRef && !elementsArray.includes(projectRef)) {
+    //   elementsArray.push(projectRef);
+    // }
 
 
 
@@ -78,8 +78,13 @@ const ProjectCard = ({ project, elementsArray }) => {
     // });
   }, []);
 
+  // useEffect(() => {
+  //   AOS.init();
+  //   AOS.refresh();
+  // }, []);
+
   return (
-    <div className={`project-card`} ref={projectRef}>
+    <div className='project-card' ref={projectRef}>
       <picture>
         <source srcSet={project.img.avif} type='image/avif' />
         <source srcSet={project.img.webp} type='image/webp' />

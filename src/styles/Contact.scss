@@ -12,9 +12,7 @@
         margin-top: 2rem;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        gap: 4rem;
-        justify-content: space-between;
-        height: 80%;
+        gap: 3rem;
     }
 
     
@@ -101,16 +99,22 @@
     
     .map-container {
         opacity: 0;
+        margin-bottom: 2rem;
+
+        .location {
+            margin-bottom: .5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
     }
     
     @media(min-width: $desktop) {
-        
         .container {
             grid-template-columns: repeat(2, 1fr);
+            gap: 4rem;
+            justify-content: space-between;
         }
-
-
-
     } 
 
 }

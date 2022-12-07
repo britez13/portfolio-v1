@@ -26,76 +26,56 @@ gsap.registerPlugin(ScrollTrigger)
 
 const About = () => {
 
-  const titleRef = useRef()
-  const timelineAboutRef = useRef();
+
+  const timelineAboutRefMobile = useRef();
+  const timelineAboutRefDesktop = useRef();
   
-
-  
-  // const funCallback = (entries) => {
-  //     entries.forEach((entry) => {
-  //       entry.target.classList.toggle("move", entry.isIntersecting);
-  //     });   
-  // }
-
-  
-  // const options = {
-  //   root: null,
-  //   rootMargin: "0px",
-  //   threshold: 0.7
-  // }
-
-
-  // useLayoutEffect(() => {
-  //   gsap.to(".about", { opacity: 1, duration: 2, delay: 2.7 });
-
-  //   // gsap.to(".skills-title", {
-  //   //   x: 0,
-  //   //   color: "green",
-  //   //   duration: 8,
-  //   //   scrollTrigger: {
-  //   //     trigger: ".skills-title",
-  //   //     toggleActions: "play none none reverse",
-  //   //     markers: true,
-  //   //   },
-  //   // });
-
-
-
-  // }, []);
-
   useEffect(() =>  {
 
-    // const el = document.querySelectorAll(".skills-title")
+    const mm = gsap.matchMedia()
 
-    // // const elements = el.map(element => console.log(element))
-
-    // const observer = new IntersectionObserver(funCallback, options);
-  
-    
-    // el.forEach(  (element) => {
-    //   observer.observe(element)
-    // })
-      
-
-    // return observer.unobserve(el)
-
-    timelineAboutRef.current = gsap
-      .timeline()
-      .to(".my-photo", { opacity: 1, duration: 2, delay: 2.9 })
-      .to(".p1", { opacity: 1, y: 0, duration: 1 }, "-=1.2")
-      .to(".p2", { opacity: 1, y: 0, duration: 1 }, "-=.6")
-      .to(".p3", { opacity: 1, y: 0, duration: 1 }, "-=.3")
-      .to(".skills-title", { opacity: 1, duration: 1 }, "-=3")
-      .fromTo(
-        ".list li",
-        { opacity: 0, y: 10 },
-        { opacity: 1, y: 0, duration: 0.7, stagger: 0.185 },
-        "-=2.8"
-      );
+   
       // .to(".input-email", { opacity: 1, y: 0, duration: 1 }, "<")
       // .to(".text-area", { opacity: 1, y: 0, duration: 1 }, "<")
       // .to(".button-submit", { opacity: 1, y: 0, duration: 1 }, "<")
       // .to(".map-container", { opacity: 1, duration: 5 }, "-=1");
+
+      mm.add("(max-width: 699px)", () => {
+        // mobile setup code here...
+        timelineAboutRefMobile.current = gsap
+          .timeline()
+          .to(".my-photo", { opacity: 1, duration: 2, delay: 2.9 })
+          .to(".p1", { opacity: 1, y: 0, duration: 1 }, "-=1.2")
+          .to(".p2", { opacity: 1, y: 0, duration: 1 }, "-=.6")
+          .to(".p3", { opacity: 1, y: 0, duration: 1 }, "-=.3")
+          .to(".skills-title", { opacity: 1, duration: 1 }, "-=.3")
+          .fromTo(
+            ".list li",
+            { opacity: 0, y: 10 },
+            { opacity: 1, y: 0, duration: 0.7, stagger: 0.185 },
+            "-=.3"
+          );
+
+      });
+
+      mm.add("(min-width: 700px)", () => {
+        // desktop setup code here...
+         timelineAboutRefDesktop.current = gsap
+           .timeline()
+           .to(".my-photo", { opacity: 1, duration: 2, delay: 2.9 })
+           .to(".p1", { opacity: 1, y: 0, duration: 1 }, "-=1.2")
+           .to(".p2", { opacity: 1, y: 0, duration: 1 }, "-=.6")
+           .to(".p3", { opacity: 1, y: 0, duration: 1 }, "-=.3")
+           .to(".skills-title", { opacity: 1, duration: 1 }, "-=3")
+           .fromTo(
+             ".list li",
+             { opacity: 0, y: 10 },
+             { opacity: 1, y: 0, duration: 0.7, stagger: 0.185 },
+             "-=2.8"
+           );
+        
+      });
+    
 
 
 

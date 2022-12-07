@@ -41,6 +41,7 @@
         .p1, .p2, .p3 {
             opacity: 0;
             transform: translateY(10px);
+            max-width: 550px;
         }
 
 
@@ -54,9 +55,9 @@
                 // justify-content: space-between;
                 // row-gap: 15px;
 
-                display: flex;
-                flex-wrap: wrap;
-                gap: 3.5rem;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2.5rem;
 
 
                 li {
@@ -69,7 +70,7 @@
                 h3 {
                     margin-top: 5px;
                     font-size: 14px;
-                    // text-align: center;
+                    text-align: center;
                 }
             }
 
@@ -88,13 +89,7 @@
             letter-spacing: 2.8px;
             margin-bottom: 3rem;
             opacity: 0;
-            // transform: translateX(100px);
-            // transition: transform 0.3s ease;
-
-            // &.move {
-            //     transform: translateX(0%);
-            // }
-
+           
             span {
                 color: $aqua;
             }
@@ -104,6 +99,28 @@
 
     }
 
+    @media(min-width: $tablet) {
+
+        .container {
+            
+            .skills {
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .list {
+                    margin-inline: auto;
+                    display: grid;
+                    row-gap: 2rem;
+                    column-gap: 5.5rem;
+                    grid-template-columns: repeat(4, 50px);
+                }
+            }
+        }
+    }
+
+
 
     @media(min-width: $desktop) {
         flex-direction: row;
@@ -112,26 +129,16 @@
         .container {
             flex-direction: row;
             gap: 8rem;
-
-            
-            // .skills-title {
-            //     text-align: left;
-            // }
-
             
             .skills {
 
+
                 .list {
-                    grid-template-columns: repeat(3, minmax(50px, 1fr));
+                    row-gap: 1.8rem;
+                    column-gap: 4rem;
                 }
             }
-
-
-
         }
-
-
-
     }
 
 

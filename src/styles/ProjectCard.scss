@@ -8,21 +8,20 @@
     border-radius: 8px;
     border: 1px solid #1f2833;
     overflow: hidden;
-    transform: translateX(20px);
+    // transform: translateX(20px);
     opacity: 0;
-    transition: transform 1s ease-out, opacity 1s ease-out;
+    // transition: transform ease-in 1s 2.1s , opacity ease-in 1s 2.1s;
 
-    &.show {
-        transform: translateX(0%);
-        opacity: 1;
-    }
+    // &.show {
+    //     transform: translateX(0%);
+    //     opacity: 1;
+    // }
 
     picture {
         width: min(100%, 700px) ;
         height: 100%;
         // object-fit: cover;
-        overflow: hidden;
-        
+        overflow: hidden;    
     }
 
     img {
@@ -40,13 +39,10 @@
 
     }
 
-
-    
     .info {
         padding-inline: 15px;
         padding-block: 20px;
 
-        
         .name {
             font-weight: 400;
 
@@ -73,9 +69,6 @@
             }
         }
 
-
-
-        
         a {
             color: currentColor;
             text-decoration: underline;
@@ -87,21 +80,33 @@
             &:first-of-type {
                 margin-right: 1rem;
             }
-
-
-
         }
 
     }
 
-    
-    @media(min-width: $desktop) {
-        flex-direction: row;
-        transform: translateX(0);
-        transform: translateY(3rem);
-
+     @media(min-width: $tablet) {
+        picture {
+            width: min(100%, 700px) ;
+            height: 220px;
+            overflow: hidden;    
+        }
     } 
 
+    @media(min-width: $desktop) {
+        // transform: translateY(0);
+        flex-direction: row;
+        transform: translateX(0);
+        // transform: translateY(3rem);
 
+        picture {
+            min-width: 270px;
+            height: 100%;
+            overflow: hidden;
 
+            img {
+                width: 270px;
+            }
+        }
+
+    } 
 }

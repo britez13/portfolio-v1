@@ -45,10 +45,10 @@ const Contact = () => {
       // .to(".contact", { opacity: 1, duration: 1, delay: 1.8 })
       .to(".linkedin-icon", { opacity: 1, y: 0, duration: 1, delay: 2.85 })
       .to(".github-icon", { opacity: 1, y: 0, duration: 1 }, "<")
-      .to(".input-text", { opacity: 1, y: 0, duration: 1 }, "<")
-      .to(".input-email", { opacity: 1, y: 0, duration: 1 }, "<")
-      .to(".text-area", { opacity: 1, y: 0, duration: 1 }, "<")
-      .to(".button-submit", { opacity: 1, y: 0, duration: 1 }, "<")
+      .to(".input-text", { opacity: 1, y: 0, duration: 1 }, "-=.65")
+      .to(".input-email", { opacity: 1, y: 0, duration: 1 }, "-=.64.8")
+      .to(".text-area", { opacity: 1, y: 0, duration: 1 }, "-=.63.8")
+      .to(".button-submit", { opacity: 1, y: 0, duration: 1 }, "-=.62.8")
       .to(".map-container", { opacity: 1, duration: 5 }, "-=1");
 
 
@@ -94,7 +94,7 @@ const Contact = () => {
             <input
               className='input-email'
               type='email'
-              placeholder='my@email.com'
+              placeholder='some@email.com'
               name='user_email'
               required
             />
@@ -113,10 +113,10 @@ const Contact = () => {
         </div>
 
         <div className="map-container">
-          <span>
+          <div className="location"> <span>
             <IoLocationOutline size='1.4rem' stroke='#66fcf1' />
           </span>
-          <span>Villarrica, Paraguay</span>
+          <span>Villarrica, Paraguay</span></div>
           <Map />
         </div>
       </div>

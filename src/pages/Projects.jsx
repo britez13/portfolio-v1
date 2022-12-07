@@ -28,37 +28,43 @@ const Projects = () => {
 
     gsap.to(".projects", { opacity: 1, duration: 1, delay: 2.5 });
 
-    // gsap.to("#hi", {
-    //   x: 0,
-    //   duration: 5,
-    //   scrollTrigger: {
-    //     trigger: "#hi",
-    //     start: "top center+=300px",
-    //     toggleActions: "play none none reverse",
-    //     // markers: true,
-    //   }
-    // });
+    //  let mm = gsap.matchMedia();
 
-    const observer = new IntersectionObserver((entries) => {
+    //  mm.add("(max-width: 699px)", () => {
+    //    // mobile setup code here...
+    //    const observer = new IntersectionObserver(
+    //      (entries) => {
+    //        entries.forEach((entry) => {
+    //          // console.log("I work entry");
 
-      entries.forEach( (entry) => {
+    //          console.log(entry);
 
-        // console.log("I work entry");
+    //          if (entry.isIntersecting) {
+    //           //  console.log(entry.target);
+    //            entry.target.classList.add("show");
+    //          }
+    //        });
+    //      },
+    //      { threshold: 0.5 }
+    //    );
 
-        console.log(entry);
+    //    revealRefs.current.forEach((el) => {
+    //      observer.observe(el.current);
+    //    });
 
-        if(entry.isIntersecting) {
-          console.log(entry.target);
-          entry.target.classList.add("show");
+    //  });
 
-        }
-      })
+    //  mm.add("(min-width: 700px)", () => {
+    //    // desktop setup code here...
+    //    gsap.to(".project-card", { opacity: 1, duration: 2, stagger: 0.5, delay: 2.9 });
+    //  });
 
-    }, {threshold: 0.5});
-
-    revealRefs.current.forEach( (el) => {
-      observer.observe(el.current)
-    })
+    gsap.to(".project-card", {
+      opacity: 1,
+      duration: 2,
+      stagger: 0.5,
+      delay: 2.9,
+    });
 
     // console.log(revealRefs.current);
 
