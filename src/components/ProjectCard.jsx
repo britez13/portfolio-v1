@@ -1,17 +1,45 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 import "../styles/ProjectCard.scss";
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project, elementsArray }) => {
+  gsap.registerPlugin(ScrollTrigger);
 
-  
-  useEffect(() => {
+  const projectRef = useRef()
+
+  // const addToRefs = (el) => {
+  //   if (el && !elementsArray.includes(el)) {
+  //     elementsArray.push(el);
+  //   }
+
+  //   // console.log(el);
+
+  //   gsap.to(el, {
+  //     opacity: 1,
+  //     x: 0,
+  //     duration: 1,
+  //     scrollTrigger: {
+  //       trigger: el,
+  //     },
+  //   });
+  // };
+
+  useLayoutEffect(() => {
+    // console.log("project card use layout effect");
+    // console.log(projectRef)
+
+    if (projectRef && !elementsArray.includes(projectRef)) {
+      elementsArray.push(projectRef);
+    }
+
+
+
+    // console.log(elementsArray);
 
     // const mm = gsap.matchMedia();
     // gsap.registerPlugin(ScrollTrigger)
-
 
     // mm.add("(max-width: 700px)", () => {
     //   gsap.to(".project-card01", {
@@ -48,13 +76,10 @@ const ProjectCard = ({ project }) => {
     // mm.add("(min-width: 701px)", () => {
     //   gsap.to(".project-card", { opacity: 1, y: 0, duration: 1.5, stagger: 1.2, delay: 3.4})
     // });
-    
-    
   }, []);
 
-
   return (
-    <div className={`project-card project-card${project.id}`}>
+    <div className={`project-card`} ref={projectRef}>
       <picture>
         <source srcSet={project.img.avif} type='image/avif' />
         <source srcSet={project.img.webp} type='image/webp' />

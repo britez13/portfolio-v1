@@ -8,9 +8,14 @@
     border-radius: 8px;
     border: 1px solid #1f2833;
     overflow: hidden;
+    transform: translateX(100px);
     opacity: 0;
-    transform: translateX(100%);
-    // transform: translateY(3rem);
+    transition: transform 1s, opacity 0.7s;
+
+    &.show {
+        transform: translateX(0%);
+        opacity: 1;
+    }
 
     picture {
         width: min(100%, 700px) ;

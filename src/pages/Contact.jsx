@@ -11,6 +11,8 @@ import gsap from "gsap";
 
 const Contact = () => {
   const form = useRef();
+  const contactRef = useRef();
+  const timelineContactRef = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -32,7 +34,27 @@ const Contact = () => {
   };
 
   useEffect(() => {
-    gsap.to(".contact", { opacity: 1, duration: 2, delay: 3 });
+    // let ctx = gsap.context(() => {
+    //   timelineRef.current = gsap
+    //     .timeline()
+    //     .to(".contact", {opacity: 1, duration: 1, delay: 2.5})
+    // }, contactRef); // <- IMPORTANT! Scopes selector text
+    // return () => ctx.revert(); // cleanup
+    timelineContactRef.current = gsap
+      .timeline()
+      // .to(".contact", { opacity: 1, duration: 1, delay: 1.8 })
+      .to(".linkedin-icon", { opacity: 1, y: 0, duration: 1, delay: 2.85 })
+      .to(".github-icon", { opacity: 1, y: 0, duration: 1 }, "<")
+      .to(".input-text", { opacity: 1, y: 0, duration: 1 }, "<")
+      .to(".input-email", { opacity: 1, y: 0, duration: 1 }, "<")
+      .to(".text-area", { opacity: 1, y: 0, duration: 1 }, "<")
+      .to(".button-submit", { opacity: 1, y: 0, duration: 1 }, "<")
+      .to(".map-container", { opacity: 1, duration: 5 }, "-=1");
+
+
+
+ 
+
   }, []);
 
   return (
@@ -45,6 +67,7 @@ const Contact = () => {
               href='https://www.linkedin.com/in/florencio-britez-69065a1b8/'
               target='_blank'
               rel='noopener noreferrer'
+              className='linkedin-icon'
             >
               <BsLinkedin size='1.5rem' fill='#66fcf1' />
             </a>
@@ -52,6 +75,7 @@ const Contact = () => {
               href='https://github.com/britez13'
               target='_blank'
               rel='noopener noreferrer'
+              className='github-icon'
             >
               <BsGithub size='1.5rem' fill='#66fcf1' />
             </a>
@@ -60,8 +84,15 @@ const Contact = () => {
           </div>
 
           <form ref={form} onSubmit={handleSubmit}>
-            <input type='text' placeholder='Name' name='user_name' required />
             <input
+              className='input-text'
+              type='text'
+              placeholder='Name'
+              name='user_name'
+              required
+            />
+            <input
+              className='input-email'
               type='email'
               placeholder='my@email.com'
               name='user_email'
@@ -75,11 +106,13 @@ const Contact = () => {
               placeholder='Message goes here'
               required
             ></textarea>
-            <button type='submit'>Send</button>
+            <button className='button-submit' type='submit'>
+              Send
+            </button>
           </form>
         </div>
 
-        <div>
+        <div className="map-container">
           <span>
             <IoLocationOutline size='1.4rem' stroke='#66fcf1' />
           </span>

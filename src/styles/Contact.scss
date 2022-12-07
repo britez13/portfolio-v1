@@ -6,10 +6,8 @@
     padding: 1.5rem 2rem 0 1.5rem;
     flex-grow: 1;
     overflow-y: scroll;
-    opacity: 0;
     // width: 100%;
 
-    
     .container {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -25,6 +23,12 @@
         margin-top: 2rem;
 
         
+        .linkedin-icon, .github-icon {
+            opacity: 0;
+            transform: translateY(10px);
+            display: inline-block;
+        }
+
         svg {
 
             transition: fill 0.3s ease;
@@ -32,11 +36,9 @@
             &:hover {
                 fill: $aqua;
             }
-
-
-
         }
 
+        
 
 
     }
@@ -59,6 +61,8 @@
             // border-radius: 5px;
             color: white;
             font-family: inherit;
+            transform: translateY(10px);
+            opacity: 0;
         }
 
         
@@ -71,9 +75,11 @@
             resize: none;
             padding: .7rem;
             font-family: inherit;
+            transform: translateY(10px);
+            opacity: 0;
         }
 
-        button {
+        .button-submit {
             padding: .5rem .4rem;
             max-width: 120px;
             border: 1px solid $aqua;
@@ -82,6 +88,8 @@
             cursor: pointer;
             font-family: inherit;
             transition: background-color 0.3s ease, color 0.3s ease;
+            transform: translateY(10px);
+            opacity: 0;
 
             &:hover {
                 background-color: $aqua;
@@ -91,6 +99,10 @@
         }
     }
 
+    
+    .map-container {
+        opacity: 0;
+    }
     
     @media(min-width: $desktop) {
         
