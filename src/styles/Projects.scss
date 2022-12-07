@@ -8,39 +8,16 @@
 }
 
 .projects-container {
+    margin-top: 2rem;
     flex-grow: 1;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 30px;
     row-gap: 50px;
     overflow: hidden;
-
-
-     .square {
-        min-height: 500px;
-        width: 100%;
-        background-color: pink;
-        margin-bottom: 1rem;
-        margin-bottom: 10rem;
-        // transform: translatex(50%);
-    } 
-
-    #hi {
-        min-height: 150px;
-        width: 100%;
-        background-color: aqua;
-        transform: translateX(100%);
-        margin-bottom: 2rem;
-        // transform: translatex(50%);
-    } 
-
-    
-      
     
     @media(min-width: $tablet) {
         grid-template-columns: repeat(2, 1fr);
     }
-
-
 }
 

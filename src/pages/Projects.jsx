@@ -54,7 +54,7 @@ const Projects = () => {
         }
       })
 
-    }, {threshold: 0.2});
+    }, {threshold: 0.5});
 
     revealRefs.current.forEach( (el) => {
       observer.observe(el.current)

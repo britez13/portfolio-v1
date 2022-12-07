@@ -9,6 +9,7 @@
     // width: 100%;
 
     .container {
+        margin-top: 2rem;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         gap: 4rem;
@@ -20,8 +21,6 @@
     .social-media {
         display: flex;
         justify-content: space-around;
-        margin-top: 2rem;
-
         
         .linkedin-icon, .github-icon {
             opacity: 0;
