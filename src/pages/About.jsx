@@ -95,12 +95,12 @@ const About = () => {
           <img className='my-photo' src='/assets/p.png' alt='My nice photo' />
           <div>
             <p className='p1'>
-              I'm a self-taught Frontend Developer based in Paraguay. Love
+              I'm a self-taught Frontend Developer based in Paraguay. I love
               creating nice and responsive user interfaces.
             </p>
             <p className='p2'>
-              Althought I mostly code in React.js, I'm open to learn new
-              technologies. Actually, my next goal is learning backend.
+              Although I mostly code in React.js, I'm open to learning new
+              technologies. My next goal is to learn backend.
             </p>
             <p className='p3'>
               Besides programming, I like solving chess puzzles, playing

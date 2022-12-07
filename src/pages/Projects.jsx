@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 // import ScrollTrigger from "gsap/ScrollTrigger";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import { Flip } from "gsap/Flip";
 import { projectsInfo } from "../data/projectsInfo";
 import ProjectCard from "../components/ProjectCard";
 import SectionTitle from "../components/SectionTitle";
@@ -25,6 +25,17 @@ const Projects = () => {
     // console.log(revealRefs.current);
 
     // console.log("project useEffect");
+    // const state = Flip.getState(".projects");
+
+    // Flip.from(state, {
+    //   absolute: true,
+    //   // onLeave: (elements) =>
+    //   //   gsap.fromTo(elements, { opacity: 1 }, { opacity: 0, rotate: 360 }),
+    //   // duration: 1,
+    //   // onComplete() {
+    //   //   squares.forEach((el) => el.remove());
+    //   // },
+    // });
 
     gsap.to(".projects", { opacity: 1, duration: 1, delay: 2.5 });
 

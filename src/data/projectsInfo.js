@@ -3,7 +3,7 @@ export const projectsInfo = [
     id: '01',
     name: "Entertainment site",
     description:
-      "It implements Firebase services such as Authorization and Firestore to register users and save their data. Also have routing, stage managament and search functionality",
+      "It implements Firebase services such as Authorization and Firestore to register users and save their data. Also has routing, stage managament and search functionality",
     stack: "JavaScript, React, Tailwind, Firebase",
     img: {
       avif: "/assets/entertainment-site.avif",
@@ -17,7 +17,7 @@ export const projectsInfo = [
     id: '02',
     name: "Photosnap",
     description:
-      "The frontend part of a marketing site for a photo-sharing app, it has an advanced layout which make it perfect to dig and put into practice my CSS skills",
+      "The frontend part of a marketing site for a photo-sharing app, has an advanced layout which made it perfect for deeping and practicing my CSS skills",
     stack: "JavaScript, Next.js, styled-components",
     img: {
       avif: "/assets/photosnap.avif",
@@ -31,7 +31,7 @@ export const projectsInfo = [
     id: '03',
     name: "Coffeeroasters",
     description:
-      "In this challenge I build  3-page subscription site. It counts with a interactive section where users can select their preferences for their final orders.",
+      "In this challenge I built a 3-page subscription site. It has an interactive section where users can select their preferences for their final orders.",
     stack: "TypeScript, React, styled-components",
     img: {
       avif: "/assets/coffeeroasters-site.avif",
@@ -45,7 +45,7 @@ export const projectsInfo = [
     id: '04',
     name: "Where in the World?",
     description:
-      "Site created with the data retrieved from the Rest Countries API. It has fiter and search functionality as well as dark/light mode",
+      "Site created with the data retrieved from the Rest Countries API. It has fiter and search functionalities as well as dark/light mode",
     stack: "JavaScript, React, styled-components",
     img: {
       avif: "/assets/rest-countries.avif",
@@ -73,7 +73,7 @@ export const projectsInfo = [
     id: '06',
     name: "Advice Generator",
     description:
-      "A random quote advice generator app. bla bla bla bla bla bla bla bla bla bla abkfjdlfjlas fdjfl kfjdfhkfhds",
+      "A random quote advice generator app which get data from the Advice Slip API, a simple but instructive project to learn how to work with 3rd party APIs",
     stack: "TypeScript, React, Tailwind",
     img: {
       avif: "/assets/advice-generator.avif",
