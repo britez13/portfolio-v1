@@ -16,7 +16,7 @@ const Contact = () => {
   const contactRef = useRef();
   const timelineContactRef = useRef();
 
-  const handleSubmit = async(e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
@@ -25,35 +25,33 @@ const Contact = () => {
         import.meta.env.VITE_TEMPLATE_ID,
         form.current,
         import.meta.env.VITE_PUBLIC_KEY
-      )
+      );
 
-      toast.success("Message sended", {
-          position: toast.POSITION.TOP_RIGHT,
-          autoClose: 2000,
-          hideProgressBar: true,
-          className: "toast-message",
-      })
-
+      toast.success("Message sent", {
+        position: toast.POSITION.TOP_RIGHT,
+        autoClose: 2000,
+        hideProgressBar: true,
+        className: "toast-message",
+      });
     } catch (some_error) {
       toast.error("Something went wrong. Try again.", {
-          position: toast.POSITION.TOP_RIGHT,
-          autoClose: 2000,
-          hideProgressBar: true,
-          className: "toast-message",
-        });
+        position: toast.POSITION.TOP_RIGHT,
+        autoClose: 2000,
+        hideProgressBar: true,
+        className: "toast-message",
+      });
     }
 
-      // .then(
-        
-      // )
+    // .then(
 
-      // .catch(() => {
-        
-      // }); 
+    // )
+
+    // .catch(() => {
+
+    // });
   };
 
   useEffect(() => {
-    
     timelineContactRef.current = gsap
       .timeline()
       .to(".linkedin-icon", { opacity: 1, y: 0, duration: 1, delay: 2.85 })
