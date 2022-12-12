@@ -1,10 +1,8 @@
 import { useEffect, useRef } from "react";
-// import { useLayoutEffect } from "react";
 
-import gsap, { Elastic } from "gsap";
+import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SectionTitle from "../components/SectionTitle";
-import TextSphere from "../components/TextSphere";
 import { SiHtml5 } from "react-icons/si";
 import { SiCss3 } from "react-icons/si";
 import { SiJavascript } from "react-icons/si";
@@ -33,12 +31,6 @@ const About = () => {
   useEffect(() =>  {
 
     const mm = gsap.matchMedia()
-
-   
-      // .to(".input-email", { opacity: 1, y: 0, duration: 1 }, "<")
-      // .to(".text-area", { opacity: 1, y: 0, duration: 1 }, "<")
-      // .to(".button-submit", { opacity: 1, y: 0, duration: 1 }, "<")
-      // .to(".map-container", { opacity: 1, duration: 5 }, "-=1");
 
       mm.add("(max-width: 699px)", () => {
         // mobile setup code here...
@@ -95,7 +87,7 @@ const About = () => {
           <img className='my-photo' src='/assets/p.png' alt='My nice photo' />
           <div>
             <p className='p1'>
-              I'm a self-taught Frontend Developer based in Paraguay. I love
+              I'm Florecio, a self-taught Frontend Developer based in Paraguay. I love
               creating nice and responsive user interfaces.
             </p>
             <p className='p2'>

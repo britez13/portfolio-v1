@@ -1,6 +1,6 @@
 export const projectsInfo = [
   {
-    id: '01',
+    id: "01",
     name: "Entertainment site",
     description:
       "It implements Firebase services such as Authorization and Firestore to register users and save their data. Also has routing, stage managament and search functionality",
@@ -14,7 +14,7 @@ export const projectsInfo = [
     codeURL: "https://github.com/britez13/entertainment-web-app",
   },
   {
-    id: '02',
+    id: "02",
     name: "Photosnap",
     description:
       "The frontend part of a marketing site for a photo-sharing app, has an advanced layout which made it perfect for deeping and practicing my CSS skills",
@@ -28,7 +28,7 @@ export const projectsInfo = [
     codeURL: "https://github.com/britez13/photosnap-website",
   },
   {
-    id: '03',
+    id: "03",
     name: "Coffeeroasters",
     description:
       "In this challenge I built a 3-page subscription site. It has an interactive section where users can select their preferences for their final orders.",
@@ -42,7 +42,7 @@ export const projectsInfo = [
     codeURL: "https://github.com/britez13/coffeeroasters-site",
   },
   {
-    id: '04',
+    id: "04",
     name: "Where in the World?",
     description:
       "Site created with the data retrieved from the Rest Countries API. It has fiter and search functionalities as well as dark/light mode",
@@ -56,7 +56,7 @@ export const projectsInfo = [
     codeURL: "https://github.com/britez13/rest-countries-api",
   },
   {
-    id: '05',
+    id: "05",
     name: "To-do app",
     description:
       "The classic To-do List app where you can create, read, update, delete tasks (CRUD operations). It was a great project to start combining JavaScript and React for the fist time  ",
@@ -70,7 +70,7 @@ export const projectsInfo = [
     codeURL: "https://github.com/britez13/To-do-react",
   },
   {
-    id: '06',
+    id: "06",
     name: "Advice Generator",
     description:
       "A random quote advice generator app which get data from the Advice Slip API, a simple but instructive project to learn how to work with 3rd party APIs",

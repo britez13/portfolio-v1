@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import SectionTitle from "../components/SectionTitle";
 import Map from "../components/Map";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { BsLinkedin } from "react-icons/bs";
 import { BsGithub } from "react-icons/bs";
 import { IoLocationOutline } from "react-icons/io5";
@@ -24,25 +26,24 @@ const Contact = () => {
         import.meta.env.VITE_PUBLIC_ID
       )
       .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+        toast.success("Message sended", {
+          position: toast.POSITION.TOP_RIGHT,
+          className: "toast-message",
+        })
+      )
+
+      .catch(() => {
+        toast.error("Something went wrong. Try again.", {
+          position: toast.POSITION.TOP_RIGHT,
+          className: "toast-message",
+        });
+      }); 
   };
 
   useEffect(() => {
-    // let ctx = gsap.context(() => {
-    //   timelineRef.current = gsap
-    //     .timeline()
-    //     .to(".contact", {opacity: 1, duration: 1, delay: 2.5})
-    // }, contactRef); // <- IMPORTANT! Scopes selector text
-    // return () => ctx.revert(); // cleanup
+    
     timelineContactRef.current = gsap
       .timeline()
-      // .to(".contact", { opacity: 1, duration: 1, delay: 1.8 })
       .to(".linkedin-icon", { opacity: 1, y: 0, duration: 1, delay: 2.85 })
       .to(".github-icon", { opacity: 1, y: 0, duration: 1 }, "<")
       .to(".input-text", { opacity: 1, y: 0, duration: 1 }, "-=.65")
@@ -50,15 +51,11 @@ const Contact = () => {
       .to(".text-area", { opacity: 1, y: 0, duration: 1 }, "-=.63.8")
       .to(".button-submit", { opacity: 1, y: 0, duration: 1 }, "-=.62.8")
       .to(".map-container", { opacity: 1, duration: 5 }, "-=1");
-
-
-
- 
-
   }, []);
 
   return (
     <main className='contact'>
+      <ToastContainer />
       <SectionTitle>Contact</SectionTitle>
       <div className='container'>
         <div>
@@ -112,11 +109,14 @@ const Contact = () => {
           </form>
         </div>
 
-        <div className="map-container">
-          <div className="location"> <span>
-            <IoLocationOutline size='1.4rem' stroke='#66fcf1' />
-          </span>
-          <span>Villarrica, Paraguay</span></div>
+        <div className='map-container'>
+          <div className='location'>
+            {" "}
+            <span>
+              <IoLocationOutline size='1.4rem' stroke='#66fcf1' />
+            </span>
+            <span>Villarrica, Paraguay</span>
+          </div>
           <Map />
         </div>
       </div>
