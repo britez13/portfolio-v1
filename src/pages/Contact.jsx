@@ -16,28 +16,40 @@ const Contact = () => {
   const contactRef = useRef();
   const timelineContactRef = useRef();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
-    emailjs
-      .sendForm(
+
+    try {
+      await emailjs.sendForm(
         import.meta.env.VITE_SERVICE_ID,
         import.meta.env.VITE_TEMPLATE_ID,
         form.current,
         import.meta.env.VITE_PUBLIC_KEY
       )
-      .then(
-        toast.success("Message sended", {
-          position: toast.POSITION.TOP_RIGHT,
-          className: "toast-message",
-        })
-      )
 
-      .catch(() => {
-        toast.error("Something went wrong. Try again.", {
+      toast.success("Message sended", {
           position: toast.POSITION.TOP_RIGHT,
+          autoClose: 2000,
+          hideProgressBar: true,
+          className: "toast-message",
+      })
+
+    } catch (some_error) {
+      toast.error("Something went wrong. Try again.", {
+          position: toast.POSITION.TOP_RIGHT,
+          autoClose: 2000,
+          hideProgressBar: true,
           className: "toast-message",
         });
-      }); 
+    }
+
+      // .then(
+        
+      // )
+
+      // .catch(() => {
+        
+      // }); 
   };
 
   useEffect(() => {
@@ -55,7 +67,7 @@ const Contact = () => {
 
   return (
     <main className='contact'>
-      <ToastContainer />
+      <ToastContainer hideProgressBar autoClose={2000} />
       <SectionTitle>Contact</SectionTitle>
       <div className='container'>
         <div>

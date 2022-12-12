@@ -1,10 +1,20 @@
 
+
+/*Override react-toastify colors*/
+:root {
+    --toastify-color-success: #66fcf1;
+     --toastify-color-error: #b62531;
+}
+
+
 $aqua: #66fcf1;
 $greyish: #1f2833;
 $black: #0b0c10;
 $white: whitesmoke;
 $tablet: 650px;
 $desktop: 1100px;
+
+
 
 
 *, *::after, *::before {
