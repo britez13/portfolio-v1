@@ -23,7 +23,7 @@ const Contact = () => {
         import.meta.env.VITE_SERVICE_ID,
         import.meta.env.VITE_TEMPLATE_ID,
         form.current,
-        import.meta.env.VITE_PUBLIC_ID
+        import.meta.env.VITE_PUBLIC_KEY
       )
       .then(
         toast.success("Message sended", {

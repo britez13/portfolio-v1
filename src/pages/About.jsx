@@ -84,7 +84,7 @@ const About = () => {
       <SectionTitle>About Me</SectionTitle>
       <section className='container'>
         <div className='description'>
-          <img className='my-photo' src='/assets/p.png' alt='My nice photo' />
+          <img className='my-photo' src='/assets/photo.png' alt='My nice photo' />
           <div>
             <p className='p1'>
               I'm Florecio, a self-taught Frontend Developer based in Paraguay. I love
