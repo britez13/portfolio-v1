@@ -57,7 +57,7 @@
 
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
-                gap: 2.5rem;
+                gap: 1rem;
 
 
                 li {
@@ -87,7 +87,7 @@
             font-size: 2rem;
             font-family: 'Bebas Neue', cursive;
             letter-spacing: 2.8px;
-            margin-bottom: 3rem;
+            margin-bottom: 1.5rem;
             opacity: 0;
            
             span {
@@ -112,8 +112,8 @@
                 .list {
                     margin-inline: auto;
                     display: grid;
-                    row-gap: 2rem;
-                    column-gap: 5.5rem;
+                    // row-gap: 1rem;
+                    column-gap: 5rem;
                     grid-template-columns: repeat(4, 50px);
                 }
             }
@@ -128,13 +128,11 @@
 
         .container {
             flex-direction: row;
-            gap: 8rem;
+            gap: 2rem;
             
             .skills {
-
-
                 .list {
-                    row-gap: 1.8rem;
+                    row-gap: 1.5rem;
                     column-gap: 4rem;
                 }
             }

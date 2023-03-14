@@ -3,27 +3,30 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SectionTitle from "../components/SectionTitle";
-import { SiHtml5 } from "react-icons/si";
-import { SiCss3 } from "react-icons/si";
-import { SiJavascript } from "react-icons/si";
-import { SiReact } from "react-icons/si";
-import { SiReactrouter } from "react-icons/si";
-import { SiNextdotjs } from "react-icons/si";
-import { SiGit } from "react-icons/si";
-import { SiFirebase } from "react-icons/si";
-import { SiSass } from "react-icons/si";
-import { SiTypescript } from "react-icons/si";
-import { SiTailwindcss } from "react-icons/si";
-import { SiGreensock } from "react-icons/si";
-
-
+import {
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiReact,
+  SiNextdotjs,
+  SiGit,
+  SiFirebase,
+  SiSass,
+  SiTypescript,
+  SiTailwindcss,
+  SiGreensock,
+  SiVuedotjs,
+  SiLaravel,
+  SiPhp,
+  SiMysql,
+  SiNodedotjs,
+} from "react-icons/si";
 
 import "../styles/About.scss";
 
 gsap.registerPlugin(ScrollTrigger)
 
 const About = () => {
-
 
   const timelineAboutRefMobile = useRef();
   const timelineAboutRefDesktop = useRef();
@@ -65,12 +68,7 @@ const About = () => {
              { opacity: 1, y: 0, duration: 0.7, stagger: 0.185 },
              "-=2.8"
            );
-        
       });
-    
-
-
-
   }, [] )
 
 
@@ -84,15 +82,20 @@ const About = () => {
       <SectionTitle>About Me</SectionTitle>
       <section className='container'>
         <div className='description'>
-          <img className='my-photo' src='/assets/photo.png' alt='My nice photo' />
+          <img
+            className='my-photo'
+            src='/assets/photo.png'
+            alt='My nice photo'
+          />
           <div>
             <p className='p1'>
-              I'm Florecio, a self-taught Frontend Developer based in Paraguay. I love
-              creating nice and responsive user interfaces.
+              I'm Florecio, a self-taught Frontend Developer based in Paraguay.
+              I love creating nice and responsive user interfaces.
             </p>
             <p className='p2'>
-              Although I mostly code in React.js, I'm open to learning new
-              technologies. My next goal is to learn backend.
+              Although I mostly code in React.js and its ecosystem, I'm open to learning new
+              technologies. That's why I'm currently doing projects with Vue.js, Laravel and 
+              MySQL.
             </p>
             <p className='p3'>
               Besides programming, I like solving chess puzzles, playing
@@ -125,8 +128,24 @@ const About = () => {
               <h3>React</h3>
             </li>
             <li>
-              <SiReactrouter size='3rem' />
-              <h3>React Router</h3>
+              <SiVuedotjs size='3rem' />
+              <h3>Vue</h3>
+            </li>
+            <li>
+              <SiPhp size='3rem' />
+              <h3>PHP</h3>
+            </li>
+            <li>
+              <SiLaravel size='3rem' />
+              <h3>Laravel</h3>
+            </li>
+            <li>
+              <SiMysql size='3rem' />
+              <h3>MySQL</h3>
+            </li>
+            <li>
+              <SiNodedotjs size='3rem' />
+              <h3>Node</h3>
             </li>
             <li>
               <SiSass size='3rem' />
