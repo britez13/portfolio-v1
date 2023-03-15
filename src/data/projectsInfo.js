@@ -3,7 +3,7 @@ export const projectsInfo = [
     id: "01",
     name: "Entertainment site",
     description:
-      "It implements Firebase services such as Authorization and Firestore to register users and save their data. Also has routing, stage managament and search functionality",
+      "It implements Firebase services such as Authorization and Firestore to register users and save their data. Also has routing, state managament and search functionality",
     stack: "JavaScript, React, Tailwind, Firebase",
     img: {
       avif: "/assets/entertainment-site.avif",
