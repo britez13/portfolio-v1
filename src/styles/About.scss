@@ -125,10 +125,11 @@
     @media(min-width: $desktop) {
         flex-direction: row;
 
-
         .container {
+            max-width: 70rem;
+            margin-inline: auto;
             flex-direction: row;
-            gap: 2rem;
+            gap: 0rem;
             
             .skills {
                 .list {
