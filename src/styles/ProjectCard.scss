@@ -30,12 +30,12 @@
   }
 
   .info {
-    padding-inline: 15px;
-    padding-block: 20px;
+    padding: 15px;
+    // padding-block: 20px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: .5rem;
+    gap: .2rem;
 
     .name {
       font-weight: 400;
