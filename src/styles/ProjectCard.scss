@@ -30,12 +30,12 @@
   }
 
   .info {
-    padding: 15px;
-    // padding-block: 20px;
+    padding: 10px 15px 15px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: flex-start;
-    gap: .2rem;
+    gap: .1rem;
 
     .name {
       font-weight: 400;
@@ -95,7 +95,10 @@
     flex-direction: row;
     gap: 7px;
     transform: translateX(0);
-    // transform: translateY(3rem);
+    
+    .info {
+      gap: .5rem;
+    }
 
     picture {
       min-width: 270px;
