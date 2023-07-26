@@ -85,7 +85,7 @@ const About = () => {
           <img
             className='my-photo'
             src='/assets/photo.png'
-            alt='My nice photo'
+            alt='My photo'
           />
           <div>
             <p className='p1'>
@@ -125,11 +125,11 @@ const About = () => {
 
             <li>
               <SiReact size='3rem' />
-              <h3>React</h3>
+              <h3>React.js</h3>
             </li>
             <li>
               <SiVuedotjs size='3rem' />
-              <h3>Vue</h3>
+              <h3>Vue.js</h3>
             </li>
             <li>
               <SiPhp size='3rem' />
@@ -145,7 +145,7 @@ const About = () => {
             </li>
             <li>
               <SiNodedotjs size='3rem' />
-              <h3>Node</h3>
+              <h3>Node.js</h3>
             </li>
             <li>
               <SiSass size='3rem' />
