@@ -99,12 +99,14 @@ const ProjectCard = ({ project, elementsArray }) => {
         <p className='stack'>
           Stack: <span>{project.stack}</span>{" "}
         </p>
+        <div className="links">
         <a className="link" href={project.liveURL} target='_blank'>
           See Demo
         </a>
         <a className="link" href={project.codeURL} target='_blank'>
           See Code
         </a>
+        </div>
       </div>
     </div>
   );
