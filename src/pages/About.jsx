@@ -16,7 +16,7 @@ import {
   SiTailwindcss,
   SiGreensock,
   SiVuedotjs,
-  SiLaravel,
+  SiStyledcomponents,
   SiPhp,
   SiMysql,
   SiNodedotjs,
@@ -136,8 +136,8 @@ const About = () => {
               <h3>PHP</h3>
             </li>
             <li>
-              <SiLaravel size='3rem' />
-              <h3>Laravel</h3>
+              <SiStyledcomponents size='3rem' />
+              <h3>styled-components</h3>
             </li>
             <li>
               <SiMysql size='3rem' />
