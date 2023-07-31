@@ -89,7 +89,7 @@ const About = () => {
           />
           <div>
             <p className='p1'>
-              I'm Florecio, a Frontend Developer based in Paraguay.
+              I'm Florencio, a Full-stack Developer based in Paraguay.
               I love building stuff for the web.
             </p>
             <p className='p2'>
