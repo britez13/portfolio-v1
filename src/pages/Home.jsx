@@ -21,7 +21,7 @@ const Home = () => {
           </span>
         </h1>
         <h1 className='title'>
-          <span>Frontend Dev</span>
+          <span>Full-stack Dev</span>
         </h1>
       </section>
       <section>
