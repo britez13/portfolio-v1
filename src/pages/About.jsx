@@ -90,11 +90,11 @@ const About = () => {
           <div>
             <p className='p1'>
               I'm Florecio, a Frontend Developer based in Paraguay.
-              I love creating nice and responsive user interfaces.
+              I love building stuff for the web.
             </p>
             <p className='p2'>
-              Although I mostly code in React.js and its ecosystem, I'm open to learning new
-              technologies. That's why I'm currently doing projects with Vue.js, PHP and 
+              Although I mostly code in JS and its ecosystem, I'm open to learning new
+              technologies. That's why I'm currently doing projects with PHP and 
               MySQL.
             </p>
             <p className='p3'>
